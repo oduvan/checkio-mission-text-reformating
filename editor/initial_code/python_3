@@ -1,16 +1,21 @@
-def sum_two(a, b):
-    """
-        sums two passed arguments
-    """
+def text_reformating(text: str, columns: int) -> str:
     # your code here
-    return None
+    return text
 
 
 if __name__ == '__main__':
+    text_sample = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl ultricies, scelerisque mi ac, vestibulum neque. Ut ullamcorper rhoncus."
     print("Example:")
-    print(sum_two(3, 2))
-    
+    print(text_reformating(text_sample, 20))
+
     # These "asserts" are used for self-checking and not for an auto-testing
-    assert sum_two(3, 2) == 5, "First"
-    assert sum_two(5, 7) == 12, "Second"
+    assert text_reformating(text_sample, 20) == '''Lorem ipsum dolor
+sit amet,
+consectetur
+adipiscing elit.
+Donec non nisl
+ultricies,
+scelerisque mi ac,
+vestibulum neque. Ut
+ullamcorper rhoncus.'''
     print("Coding complete? Click 'Check' to earn cool rewards!")

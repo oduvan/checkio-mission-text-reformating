@@ -7,30 +7,46 @@ Each test is a dict with
     "explanation" -- not necessarily a key, it's used for an additional info in animation.
 """
 
+text_sample = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl ultricies, scelerisque mi ac, vestibulum neque. Ut ullamcorper rhoncus."
 
 TESTS = {
     "Basics": [
         {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "input": [text_sample, 20],
+            "answer": '''Lorem ipsum dolor
+sit amet,
+consectetur
+adipiscing elit.
+Donec non nisl
+ultricies,
+scelerisque mi ac,
+vestibulum neque. Ut
+ullamcorper rhoncus.'''
         },
         {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
+            "input": [text_sample, 10],
+            "answer": '''Lorem
+ipsum
+dolor sit
+amet,
+consectetur
+adipiscing
+elit.
+Donec non
+nisl
+ultricies,
+scelerisque
+mi ac,
+vestibulum
+neque. Ut
+ullamcorper
+rhoncus.'''
         }
     ],
     "Extra": [
         {
-            "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
-        },
-        {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
+            "input": ["Lorem ipsum", 20],
+            "answer": "Lorem ipsum"
         }
     ]
 }

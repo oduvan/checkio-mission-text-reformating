@@ -1,20 +1,22 @@
 <!-- Describe task in general -->
 
+<p><i>Your friend asked you to reformat a text for school magazine.</i></p>
+
 <p>
-    Sum two passed ints
+    You have long strings that you want to reformat so that they fill a user-specified number of columns but you should not cut words. Input text has not words longer than number of columns for the output text.
 </p>
 
-<p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+<p>
+
 </p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <strong>Input: </strong> Two arguments. Text as a String is number of columns as an int.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> String. 
 </p>
 
 
@@ -25,12 +27,26 @@
     </p>
 
 {% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">sumTwo(2, 3) == 5
-sumTwo(5, 7) == 12
+<pre class="brush: javascript">textReformating("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl ultricies, scelerisque mi ac, vestibulum neque. Ut ullamcorper rhoncus.", 20) == ('Lorem ipsum dolor\n' +
+'sit amet,\n' +
+'consectetur\n' +
+'adipiscing elit.\n' +
+'Donec non nisl\n' +
+'ultricies,\n' +
+'scelerisque mi ac,\n' +
+'vestibulum neque. Ut\n' +
+'ullamcorper rhoncus.')
 </pre>
 {% else %}
-<pre class="brush: python">sum_two(2, 3) == 5
-sum_two(5, 7) == 12
+<pre class="brush: python">text_reformating("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl ultricies, scelerisque mi ac, vestibulum neque. Ut ullamcorper rhoncus.", 20) == '''Lorem ipsum dolor
+sit amet,
+consectetur
+adipiscing elit.
+Donec non nisl
+ultricies,
+scelerisque mi ac,
+vestibulum neque. Ut
+ullamcorper rhoncus.'''
 </pre>
 {% endif %}
 </div>

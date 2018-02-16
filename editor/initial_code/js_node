@@ -1,19 +1,25 @@
 "use strict";
 
-function sumTwo(a, b) {
-    // sums two passed arguments
-
+function textReformating(text, columns) {
     // your code here
-    return 0;
+    return text;
 }
 
 var assert = require('assert');
 if (!global.is_checking) {
+	var text_sample = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nisl ultricies, scelerisque mi ac, vestibulum neque. Ut ullamcorper rhoncus."
     console.log('Example:')
-    console.log(sumTwo(3, 2))
+    console.log(textReformating(text_sample, 20))
 
     // These "asserts" are used for self-checking and not for an auto-testing
-    assert.equal(sumTwo(3, 2), 5)
-    assert.equal(sumTwo(5, 7), 12)
+    assert.equal(textReformating(text_sample, 20), ('Lorem ipsum dolor\n' +
+'sit amet,\n' +
+'consectetur\n' +
+'adipiscing elit.\n' +
+'Donec non nisl\n' +
+'ultricies,\n' +
+'scelerisque mi ac,\n' +
+'vestibulum neque. Ut\n' +
+'ullamcorper rhoncus.'))
     console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }
